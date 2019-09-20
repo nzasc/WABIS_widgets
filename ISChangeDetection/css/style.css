@@ -1,0 +1,14 @@
+#thresholdValue .dijitSliderRemainingBarH,#differenceValue .dijitSliderRemainingBarH{
+    background-color:#008299;
+    border-color: #ddd;
+}
+#positiveRange .dijitSliderRemainingBarH, #negativeRange .dijitSliderProgressBarH{
+    background-color:#008299;
+    border-color: #ddd;
+    background-image: linear-gradient(#27b2cf,#008299);
+}
+#negativeRange .dijitSliderRemainingBarH,#positiveRange .dijitSliderProgressBarH, #thresholdValue .dijitSliderProgressBarH, #differenceValue .dijitSliderProgressBarH{
+    background-color: #ddd;
+    border-color: #ddd;
+    
+}

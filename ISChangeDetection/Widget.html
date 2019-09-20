@@ -1,0 +1,87 @@
+<div>
+    <div id="changeDetectionDisplay" style="display: block;">
+        <label for='method'>Method: </label>
+        <select id="method" data-dojo-type="dijit/form/Select">
+        </select>
+        <div data-dojo-attach-point="changeMode" style="display:none;">
+            <br />
+            <label for="changeModeList">Mode: </label><select id="changeModeList" data-dojo-type="dijit/form/Select">
+                <option value="image">Difference Image</option>
+                <option value="mask">Difference Mask</option>
+                <option value="threshold">Threshold Mask</option>
+            </select>
+        </div>
+        <div id="bandInputs" style="display: none;">
+            <br />
+            <table style="border: 0 solid transparent;"><tr><td><div id="bandName1" style="display: inline-block;font-weight: bolder;"></div></td>
+                    <td><select data-dojo-type="dijit/form/Select" id="band1">
+                        </select>
+                    </td></tr>
+                <tr><td><div id="bandName2" style="display: inline-block;font-weight: bolder;"></div></td>
+                    <td><select data-dojo-type="dijit/form/Select" id="band2">
+                        </select></td></tr></table>
+        </div>
+        <div data-dojo-attach-point="maskRangeSpinners" style="display: none;margin-top: 8px;">
+            
+            <div style="vertical-align: top;display: inline-block;width: 20%;font-weight: bold;">Positive: </div>
+            <div id="positiveRange"   style="width:78%;display: inline-block;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0.15,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+                <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
+                <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
+                    <li>0</li>
+                    <li>0.2</li>
+                    <li>0.4</li>
+                    <li>0.6</li>
+                    <li>0.8</li>
+                    <li>1</li>
+                </ol>
+            </div><br/>
+            <div style="vertical-align: top;display: inline-block;margin-top: 5px;width: 20%;font-weight: bold;">Negative: </div>
+            <div id="negativeRange"   style="width:78%;display: inline-block;margin-top: 5px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:-0.15,minimum: -1,maximum:0,intermediateChanges:true,showButtons:true">
+                <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
+                <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
+                    <li>-1</li>
+                    <li>-0.8</li>
+                    <li>-0.6</li>
+                    <li>-0.4</li>
+                    <li>-0.2</li>
+                    <li>0</li>
+                </ol>
+            </div>
+        </div>
+        <div data-dojo-attach-point="thresholdRangeSpinners" style="display: none;margin-top: 8px;">
+            
+            <div style="vertical-align: top;display: inline-block;font-weight: bold;">Threshold: </div>
+            <div id="thresholdValue"  style="width:70%;display: inline-block;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+                <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
+                <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
+                    <li>0</li>
+                    <li>0.2</li>
+                    <li>0.4</li>
+                    <li>0.6</li>
+                    <li>0.8</li>
+                    <li>1</li>
+                </ol>
+            </div> 
+                        <div style="vertical-align: top;display: inline-block;margin-top: 5px;font-weight: bold;">Difference: </div>
+            <div id="differenceValue"   style="width:70%;display: inline-block;margin-top: 5px;" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props="value:0,minimum: 0,maximum:1,intermediateChanges:true,showButtons:true">
+                <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration" count="6" style="height:5px;color:#27b2cf"></div>
+                <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration" style="height:1em;font-size:75%;color:gray">
+                    <li>0</li>
+                    <li>0.2</li>
+                    <li>0.4</li>
+                    <li>0.6</li>
+                    <li>0.8</li>
+                    <li>1</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div data-dojo-attach-point="areaValueContainer" style="margin-top: 8px;display:none;">
+        <div data-dojo-attach-point="areaValueLabel" style="font-weight: bold;display: inline-block;">Area Decrease / Increase:</div>&nbsp;&nbsp;<div data-dojo-attach-point="areaValue"  style="font-weight: bolder;color: magenta; display: inline-block;"></div><br />
+        </div>
+        <button data-dojo-type="dijit/form/Button" type="button" id="changeDetectionApply" style="margin-left: 40%;margin-top: 5px;">Apply</button>
+    </div>
+    <div data-dojo-attach-point="setPrimarySecondaryLayers" style="color: #0080C0;">
+    </div>
+
+</div>

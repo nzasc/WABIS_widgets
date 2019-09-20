@@ -1,0 +1,17 @@
+{
+  "name": "ISDisplayOrder",
+  "label": "IS Display Order",
+  "platform": "HTML",
+  "version": "",
+  "author": "Esri",
+  "description": "sets the mosaic rule for the primary layer, which determines which image in the mosaic will be visualized if images overlap",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasLocale" : false,
+    "hasSettingPage" : false,
+    "hasSettingUIFile" : false,
+    "hasSettingLocale" : false,
+    "hasSettingStyle" : false
+  }
+}
